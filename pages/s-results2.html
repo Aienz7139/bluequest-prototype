@@ -12,7 +12,7 @@
         
         /* Container styles */
         .custom-container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 20px auto;
             border: 2px solid #000;
             border-radius: 15px;
@@ -123,7 +123,7 @@
             color: white;
             font-size: 13px;
             cursor: pointer;
-        }
+        }   
         .keyword-dark:hover {
             background-color: #444;
         }
@@ -140,15 +140,6 @@
         .main-content {
             flex: 1;
             padding: 20px;
-        }
-        
-        .profile-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: #f5f5f5;
-            border-radius: 15px;
-            padding: 20px;
-            position: relative;
         }
         
         .profile-header {
@@ -307,163 +298,12 @@
     <div class="main-content">
         <div class="custom-container">
             <div class="profile-header">
-                <h1 class="profile-title">My Profile</h1>
+                <h1 class="profile-title">Survey Results</h1>
             </div>
             
             <form id="profileForm">
                 <div class="form-container">
-                    <div class="form-heading">Basic Information</div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label">Name:</label>
-                            <input type="text" class="form-control" placeholder="ex: Juan Dela Cruz">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Birthday:</label>
-                            <input type="text" class="form-control" placeholder="MM/DD/YYYY">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Citizenship:</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Province:</label>
-                            <select class="form-select">
-                                <option value="">Select Province</option>
-                                <option value="metro_manila">Metro Manila</option>
-                                <option value="cavite">Cavite</option>
-                                <option value="laguna">Laguna</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label">Sex:</label>
-                            <select class="form-select">
-                                <option value="">Select</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Age:</label>
-                            <input type="number" class="form-control">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Religion:</label>
-                            <select class="form-select">
-                                <option value="">Select Religion</option>
-                                <option value="catholic">Catholic</option>
-                                <option value="protestant">Protestant</option>
-                                <option value="islam">Islam</option>
-                                <option value="buddhism">Buddhism</option>
-                                <option value="hinduism">Hinduism</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">City:</label>
-                            <select class="form-select">
-                                <option value="">Select City</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label">Profession:</label>
-                            <select class="form-select">
-                                <option value="">Select Profession</option>
-                                <option value="student">Student</option>
-                                <option value="teacher">Teacher</option>
-                                <option value="engineer">Engineer</option>
-                                <option value="doctor">Doctor</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Barangay:</label>
-                            <select class="form-select">
-                                <option value="">Select Barangay</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group"></div>
-                        <div class="form-group"></div>
-                    </div>
-                    
-                    <div class="divider">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="courseConsent">
-                            <label for="courseConsent">I am willing to participate in surveys regarding my course</label>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label">Year:</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Course:</label>
-                            <select class="form-select">
-                                <option value="">ex: BS Psychology</option>
-                                <option value="psychology">BS Psychology</option>
-                                <option value="it">BS Information Technology</option>
-                                <option value="cs">BS Computer Science</option>
-                                <option value="nursing">BS Nursing</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Year of Graduation:</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        
-                        <div class="form-group"></div>
-                    </div>
-                    
-                    <div class="divider">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="economicConsent">
-                            <label for="economicConsent">I am willing to participate in surveys regarding my socio-economic situation</label>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label">Class:</label>
-                            <select class="form-select">
-                                <option value="">Select Class</option>
-                                <option value="upper">Upper Class</option>
-                                <option value="middle">Middle Class</option>
-                                <option value="lower_middle">Lower Middle Class</option>
-                                <option value="working">Working Class</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Monthly Income Bracket:</label>
-                            <select class="form-select">
-                                <option value="">Select Income Bracket</option>
-                                <option value="below10k">Below 10,000</option>
-                                <option value="10k_20k">10,000 - 20,000</option>
-                                <option value="20k_30k">20,000 - 30,000</option>
-                                <option value="30k_50k">30,000 - 50,000</option>
-                                <option value="above50k">Above 50,000</option>
-                            </select>
-                        </div>
+                    <div class="form-heading">Question 21</div>
                         
                         <div class="form-group"></div>
                         <div class="form-group">

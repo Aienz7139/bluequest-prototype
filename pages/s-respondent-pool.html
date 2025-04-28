@@ -12,7 +12,7 @@
         
         /* Container styles */
         .custom-container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 20px auto;
             border: 2px solid #000;
             border-radius: 15px;
@@ -123,7 +123,7 @@
             color: white;
             font-size: 13px;
             cursor: pointer;
-        }
+        }   
         .keyword-dark:hover {
             background-color: #444;
         }
@@ -140,15 +140,6 @@
         .main-content {
             flex: 1;
             padding: 20px;
-        }
-        
-        .profile-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: #f5f5f5;
-            border-radius: 15px;
-            padding: 20px;
-            position: relative;
         }
         
         .profile-header {
@@ -315,10 +306,17 @@
                     <div class="form-heading">Basic Information</div>
                     
                     <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label">Sex:</label>
-                            <input type="text" class="form-control" placeholder="ex: Juan Dela Cruz">
-                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Sex:</label>
+                                <select class="form-select">
+                                    <option value="">Select</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
 
                         <div class="form-group">
                             <label class="form-label">Citizenship:</label>
@@ -336,28 +334,31 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label">Birthday:</label>
-                            <input type="text" class="form-control" placeholder="MM/DD/YYYY">
+                            <label class="form-label">Target # of Respondents:</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Respondent Pool:</label>
+                            <input type="text" class="form-control" placeholder="N/A">
                         </div>
                         
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label class="form-label">Sex:</label>
+                            <label class="form-label">Age Range:</label>
                             <select class="form-select">
-                                <option value="">Select</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>
+                                <option value="">Select Age Range</option>
+                                <option value="catholic">13-18</option>
+                                <option value="protestant">19-25</option>
+                                <option value="islam">26-30</option>
+                                <option value="buddhism">31-35</option>
+                                <option value="hinduism">36-40</option>
+                                <option value="other">41+</option>
                             </select>
                         </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Age:</label>
-                            <input type="number" class="form-control">
-                        </div>
-                        
+                
                         <div class="form-group">
                             <label class="form-label">Religion:</label>
                             <select class="form-select">
@@ -370,14 +371,26 @@
                                 <option value="other">Other</option>
                             </select>
                         </div>
-                        
+                    
                         <div class="form-group">
                             <label class="form-label">City:</label>
                             <select class="form-select">
                                 <option value="">Select City</option>
                             </select>
                         </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Weeks to conduct Study:</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Estimated Budget:</label>
+                            <input type="text" class="form-control">
+                        </div>
+
                     </div>
+                </div>
                     
                     <div class="form-row">
                         <div class="form-group">
@@ -399,15 +412,13 @@
                             </select>
                         </div>
                         
-                        <div class="form-group"></div>
-                        <div class="form-group"></div>
-                    </div>
-                    
-                    <div class="divider">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="courseConsent">
-                            <label for="courseConsent">I am willing to participate in surveys regarding my course</label>
+                        <div class="form-group">
+                            <label class="form-label">Duration of Survey:</label>
+                            <input type="text" class="form-control" placeholder="in minutes">
                         </div>
+
+                        <div class="form-group"></div>
+                        <div class="form-group"></div>
                     </div>
                     
                     <div class="form-row">
@@ -433,13 +444,6 @@
                         </div>
                         
                         <div class="form-group"></div>
-                    </div>
-                    
-                    <div class="divider">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="economicConsent">
-                            <label for="economicConsent">I am willing to participate in surveys regarding my socio-economic situation</label>
-                        </div>
                     </div>
                     
                     <div class="form-row">
@@ -468,7 +472,7 @@
                         
                         <div class="form-group"></div>
                         <div class="form-group">
-                            <button type="submit" class="submit-btn">Submit</button>
+                            <button type="submit" class="btn btn-submit">Submit</button>
                         </div>
                     </div>
                 </div>
