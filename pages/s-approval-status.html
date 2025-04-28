@@ -1,1 +1,406 @@
-<!-- Add approval status image -->
+<!-- Add approval status image --><!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap" rel="stylesheet">
+        <title>BlueQuest - My Profile</title>
+        <style>
+    
+            
+            /* Container styles */
+            .custom-container {
+                max-width: 1100px;
+                margin: 20px auto;
+                border: 2px solid #000;
+                border-radius: 15px;
+                padding: 20px;
+                position: relative;
+            }
+            .container-title {
+                position: absolute;
+                top: -12px;
+                left: 20px;
+                background-color: white;
+                padding: 0 10px;
+                font-size: large;
+                font-family: "Raleway";
+                font-weight: bold;
+            }
+    
+            /* Input field styling */
+            .input-label {
+                display: block;
+                margin-bottom: 8px;
+                font-size:medium;
+                font-family: "Raleway";
+            }
+            .input-field {
+                width: 100%;
+                max-width: 220px;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                outline: none;
+                font-size:medium;
+                font-family: "Raleway";
+            }
+            .input-field:focus {
+                border-color: #0066ff;
+                box-shadow: 0 0 5px rgba(0, 102, 255, 0.3);
+            }
+    
+            /* Button - General */
+            .btn {
+                padding: 5px 20px;
+                border-radius: 20px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.01s ease;
+                border: none;
+                font-size: 14px;
+                font-size:medium;
+                font-family: "Raleway";
+            }
+    
+            /* Submit button - blue */
+            .btn-submit {
+                background-color: #3498db;
+                color: white;
+                box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+            }
+            .btn-submit:hover {
+                background-color: #2980b9;
+                box-shadow: 0 4px 8px rgba(52, 152, 219, 0.4);
+            }
+    
+            .match {
+                padding: 5px 20px;
+                border-radius: 20px;
+                font-weight: 500;
+                border: 1px solid #ccc;
+                font-size: 14px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                font-size:medium;
+                font-family: "Raleway";
+            }
+    
+            /* Medium Match button - light yellow */
+            .medium-match {
+                background-color: #fffbc8;
+                color: #333;
+                border: 1px solid #e6e0a3;
+            }
+    
+            /* High Match button - green */
+            .high-match {
+                background-color: #a8e6cf;
+                color: #333;
+                border: 1px solid #8dccb8;
+            }
+    
+            /* Keyword button - light style */
+            .keyword-light {
+                background-color: transparent;
+                border: 1px solid #aaa;
+                padding: 6px 15px;
+                color: #333;
+                font-size: 13px;
+                cursor: pointer;
+            }
+            .keyword-light:hover {
+                background-color: #f5f5f5;
+            }
+    
+            /* Keyword button - dark style */
+            .keyword-dark {
+                background-color: #333;
+                border: 1px solid #222;
+                padding: 6px 15px;
+                color: white;
+                font-size: 13px;
+                cursor: pointer;
+            }   
+            .keyword-dark:hover {
+                background-color: #444;
+            }
+    
+            /* ---------------------------------------------------------------------- */
+            
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                background-color: #f5f5f5;
+            }
+            
+            .main-content {
+                flex: 1;
+                padding: 20px;
+            }
+            
+            .profile-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            
+            .profile-title {
+                color: #333;
+                font-size: 24px;
+                margin: 0;
+                margin-left: 10px;
+                font-size:x-large;
+                font-family: "Raleway";
+            }
+            
+            .form-container {
+                border: 2px solid #ccc;
+                border-radius: 30px;
+                padding: 20px;
+                position: relative;
+            }
+            
+            .form-heading {
+                position: absolute;
+                top: -15px;
+                left: 20px;
+                background-color: #f5f5f5;
+                padding: 0 10px;
+                font-size: 18px;
+                font-weight: bold;
+                font-size:medium;
+                font-family: "Raleway";
+            }
+            
+            .form-row {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 15px;
+            }
+            
+            .form-group {
+                flex: 1;
+                min-width: 200px;
+                margin: 0 10px 10px 0;
+            }
+            
+            .form-label {
+                display: block;
+                margin-bottom: 5px;
+                color: #333;
+                font-size:medium;
+                font-family: "Raleway";
+            }
+            
+            .form-control {
+                width: 90%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            
+            .form-select {
+                width: 97.5%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: white;
+                appearance: menulist;
+            }
+            
+            .form-text {
+                width: 90%;
+                color: #777;
+                font-size: 12px;
+                margin-top: 3px;
+            }
+            
+            .divider {
+                border-top: 1px dotted #ccc;
+                margin: 20px 0;
+                position: relative;
+            }
+            
+            .checkbox-container {
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: -10px;
+                left: 20px;
+                background-color: #f5f5f5;
+                padding: 0 10px;
+                font-size:small;
+                font-family: "Raleway";
+            }
+            
+            .submit-btn {
+                background-color: #3399ff;
+                color: white;
+                border: none;
+                border-radius: 20px;
+                padding: 10px 30px;
+                font-size: 16px;
+                cursor: pointer;
+                float: right;
+            }
+            
+            .submit-btn:hover {
+                background-color: #0066cc;
+            }
+            
+            @media (max-width: 768px) {
+                .form-group {
+                    flex: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-text">B</span>
+                <div class="logo-circle"></div>
+            </div>
+            <div class="sidebar-icon avatar">
+                <img src="/api/placeholder/40/40" alt="User avatar">
+            </div>
+            <div class="sidebar-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 6v6l4 2"></path>
+                </svg>
+            </div>
+            <div class="sidebar-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+            </div>
+            <div class="sidebar-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+            </div>
+            <div class="sidebar-icon" style="margin-top: auto; margin-bottom: 20px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="custom-container">
+                <div class="profile-header">
+                    <h1 class="profile-title">Approval Status</h1>
+                </div>
+                
+                <form id="profileForm">
+                    <div class="form-container">
+                        <img src="images\approval_image.png" alt="Survey results showing comedic elements in sports events" width="100%" />
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Province, City, Barangay dropdowns
+                const provinceSelect = document.querySelector('select:nth-of-type(1)');
+                const citySelect = document.querySelector('select:nth-of-type(4)');
+                const barangaySelect = document.querySelector('select:nth-of-type(6)');
+                
+                // Sample data - in a real app, this would come from an API
+                const locations = {
+                    'metro_manila': {
+                        cities: ['Manila', 'Quezon City', 'Makati', 'Pasig'],
+                        barangays: {
+                            'Manila': ['Binondo', 'Ermita', 'Intramuros', 'Malate'],
+                            'Quezon City': ['Diliman', 'Cubao', 'Kamuning', 'Galas'],
+                            'Makati': ['Poblacion', 'Bel-Air', 'San Lorenzo', 'Urdaneta'],
+                            'Pasig': ['Ortigas', 'Kapitolyo', 'Ugong', 'Manggahan']
+                        }
+                    },
+                    'cavite': {
+                        cities: ['Bacoor', 'Dasmariñas', 'Cavite City', 'Imus'],
+                        barangays: {
+                            'Bacoor': ['Talaba', 'Molino', 'Queens Row', 'Niog'],
+                            'Dasmariñas': ['Zone I', 'Zone II', 'Zone III', 'Zone IV'],
+                            'Cavite City': ['Caridad', 'San Antonio', 'San Roque', 'Santa Cruz'],
+                            'Imus': ['Anabu', 'Buhay Na Tubig', 'Malagasang', 'Alapan']
+                        }
+                    },
+                    'laguna': {
+                        cities: ['Santa Rosa', 'Calamba', 'Biñan', 'San Pedro'],
+                        barangays: {
+                            'Santa Rosa': ['Balibago', 'Don Jose', 'Macabling', 'Pulong Santa Cruz'],
+                            'Calamba': ['Bucal', 'Canlubang', 'Mayapa', 'Parian'],
+                            'Biñan': ['Canlalay', 'Langkiwa', 'Malaban', 'Mamplasan'],
+                            'San Pedro': ['Estrella', 'Landayan', 'Narra', 'Pacita']
+                        }
+                    }
+                };
+                
+                // Update city options when province changes
+                provinceSelect.addEventListener('change', function() {
+                    const province = this.value;
+                    citySelect.innerHTML = '<option value="">Select City</option>';
+                    barangaySelect.innerHTML = '<option value="">Select Barangay</option>';
+                    
+                    if (province && locations[province]) {
+                        locations[province].cities.forEach(city => {
+                            const option = document.createElement('option');
+                            option.value = city.toLowerCase().replace(' ', '_');
+                            option.textContent = city;
+                            citySelect.appendChild(option);
+                        });
+                    }
+                });
+                
+                // Update barangay options when city changes
+                citySelect.addEventListener('change', function() {
+                    const province = provinceSelect.value;
+                    const city = this.options[this.selectedIndex].text;
+                    barangaySelect.innerHTML = '<option value="">Select Barangay</option>';
+                    
+                    if (province && city && locations[province] && locations[province].barangays[city]) {
+                        locations[province].barangays[city].forEach(barangay => {
+                            const option = document.createElement('option');
+                            option.value = barangay.toLowerCase().replace(' ', '_');
+                            option.textContent = barangay;
+                            barangaySelect.appendChild(option);
+                        });
+                    }
+                });
+                
+                // Form submission
+                const form = document.getElementById('profileForm');
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get all form inputs
+                    const formData = new FormData(form);
+                    const data = {};
+                    
+                    for (const [key, value] of formData.entries()) {
+                        data[key] = value;
+                    }
+                    
+                    // In a real app, you would send this data to a server
+                    console.log('Form data:', data);
+                    alert('Profile information submitted successfully!');
+                });
+            });
+        </script>
+    </body>
+    </html>
